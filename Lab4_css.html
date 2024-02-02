@@ -7,15 +7,33 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #87CEEB, #dbedec);
+    }
+
+    .content {
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+      position: relative;
     }
+
+    .grass {
+      height: 200px;
+      background: #b6f08d; 
+      width: 100%;
+    }
+
+
   </style>
   <title>Lab4_css</title>
 </head>
 <body>
+  <div class="content">
+  </div>
+  <div class="grass"></div>
 </body>
 </html>
