@@ -106,21 +106,48 @@
       clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
       z-index: 1;
     }
+
+    .ear.left {
+      position: absolute;
+      width: 250px; 
+      height: 200px; 
+      top: 10%; 
+      background: #898a85; 
+      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
+      z-index: 1;
+      transform: rotate(-35deg);
+      left: 30%; 
+    }
+
+    .ear.right {
+      position: absolute;
+      width: 250px; 
+      height: 200px; 
+      top: 10%; 
+      background: #898a85; 
+      clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+      z-index: 1;
+      transform: rotate(35deg);
+      right: 30%; 
+    }
+
   </style>
   <title>Lab4_css</title>
 </head>
 <body>
-  <div class="content">
-    <div class="face">
-      <div class="eye left">
-        <div class="pupil left"></div>
+    <div class="content">
+      <div class="face">
+        <div class="eye left">
+          <div class="pupil left"></div>
+        </div>
+        <div class="eye right">
+          <div class="pupil right"></div>
+        </div>
+        <div class="nose"></div>
       </div>
-      <div class="eye right">
-        <div class="pupil right"></div>
-      </div>
-      <div class="nose"></div>
     </div>
-  </div>
-  <div class="grass"></div>
-</body>
-</html>
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="grass"></div>
+  </body>
+  </html>
