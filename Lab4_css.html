@@ -107,30 +107,50 @@
       z-index: 1;
     }
 
-    .ear.left {
+    .ear {
       position: absolute;
+      top: 10%; 
       width: 250px; 
       height: 200px; 
-      top: 10%; 
       background: #898a85; 
-      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
       z-index: 1;
+      transform-origin: top;
+    }
+
+    .ear.left {
+      left: 27%; 
+      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
       transform: rotate(-35deg);
-      left: 30%; 
+    }
+
+    .ear.left::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 75%;
+      height: 80%;
+      background: #fbded4;
+      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
     }
 
     .ear.right {
-      position: absolute;
-      width: 250px; 
-      height: 200px; 
-      top: 10%; 
-      background: #898a85; 
+      right: 27%; 
       clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
-      z-index: 1;
-      transform: rotate(35deg);
-      right: 30%; 
+      transform: rotate(33deg);
     }
 
+    .ear.right::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      width: 75%;
+      height: 80%;
+      background: #fbded4;
+      clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+    }
+    
   </style>
   <title>Lab4_css</title>
 </head>
