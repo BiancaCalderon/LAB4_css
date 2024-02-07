@@ -10,7 +10,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background: linear-gradient(to bottom, #87CEEB, #dbedec);
+      background: linear-gradient(to bottom, #3bb5f6, #dbedec);
     }
 
     .content {
@@ -23,9 +23,10 @@
 
     .grass {
       height: 200px;
-      background: #b6f08d; 
       width: 100%;
       margin-top: auto;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #8cdd67, #8cdd67);
     }
 
     .face {
@@ -34,13 +35,14 @@
       height: 400px;
       background: #898a85; 
       border-radius: 50%; 
+      border: 2px solid #2b2b2b;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start; 
       margin-top: 140px; 
-      left: -100px;
+      left: -85px;
       z-index: 1;
     }
 
@@ -127,7 +129,7 @@
       border-width: 0 100px 100px 0; 
       border-color: transparent #fedcd0 transparent transparent; 
       transform: rotate(-70deg);
-      margin-top: -187px;
+      margin-top: -190px;
       margin-left: -280px; 
     }
 
@@ -135,11 +137,10 @@
       border-width: 0 0 90px 90px; 
       border-color: transparent transparent transparent #fedcd0; 
       transform: rotate(70deg);
-      margin-top: -187px;
-      margin-left: 60px;  
+      margin-top: -190px;
+      margin-left: 80px;  
       margin-right: 20px;  
     }
-
 
     .nose {
       width: 15px;
@@ -148,15 +149,72 @@
       border-radius: 50%;
       position: relative;
       bottom: -200px;
-      left: -345px;
+      left: -333px;
       z-index: 1;
     }
 
+    .body {
+      width: 500px;
+      height: 305px;
+      background-color: #898a85;
+      border-radius: 50%;
+      margin-top: 240px;
+      z-index: 0;
+      margin-left: -300px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .paw {
+      width: 270px;
+      height: 90px;
+      background-color: #fafeed; 
+      border-radius: 50%;
+      position: relative;
+      bottom: -250px;
+      margin-left: -10px;
+      margin-right: -150px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .oval {
+      width: 100px;
+      height: 63px;
+      background-color: #fafeed;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+      left: -10px;
+      z-index: 1; 
+    }
+
+    .paw.right {
+      margin-left: -250px;
+      margin-right: -10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .oval.right {
+      left: auto;
+      right: 170px;
+      top: 10px;
+    }
   </style>
   <title>Lab4_css</title>
 </head>
 <body>
   <div class="content">
+    <div class="paw">
+      <div class="oval"></div>
+    </div> 
     <div class="face">
       <div class="triangle"></div>
       <div class="eyes">
@@ -168,12 +226,18 @@
         </div>
       </div>
     </div>
+    <div class="paw right">
+      <div class="oval right"></div>
+    </div> 
     <div class="nose"></div>
     <div class="ear left"></div>
     <div class="ear right"></div>
     <div class="ear left inner"></div> 
-    <div class="ear right inner"></div> 
+    <div class="ear right inner"></div>
+    <div class="body">
+    </div>
   </div>
   <div class="grass"></div>
 </body>
 </html>
+
