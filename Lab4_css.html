@@ -62,7 +62,7 @@
       background-color: #fafeed;
       border-radius: 50%;
       position: relative;
-      top: -70px; 
+      top: -70px;
       z-index: 1; 
     }
 
@@ -92,15 +92,11 @@
       height: 90px;
       background: #2b2b2b;
       border-radius: 50%;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease; 
     }
 
-    .eye.left:hover .pupil {
-      background: purple; 
-    }
-
-    .eye.right:hover .pupil {
-      background: purple; 
+    .eye:hover .pupil {
+      background: purple;
     }
 
     .eye.left {
@@ -160,6 +156,14 @@
       margin-top: -177px;
       margin-left: 80px;  
       margin-right: 30px;  
+    }
+
+    .ear.left + .ear.right {
+      margin-top: -177px;
+    }
+
+    .ear.left ~ .ear.left.inner {
+      margin-top: -177px;
     }
 
     .nose {
@@ -313,11 +317,18 @@
       justify-content: center;
       align-items: flex-end;
     }
+
+    .eye > .pupil {
+      transition: background-color 0.3s ease; 
+    }
   </style>
   <title>Lab4_css</title>
 </head>
 <body>
   <div class="content">
+    <div class="black-oval"></div>
+    <div class="black-oval"></div>
+    <div class="black-oval"></div>
     <div class="cloud"> 
       <div class="cloud-part"></div>
       <div class="cloud-part"></div>
