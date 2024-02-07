@@ -22,152 +22,158 @@
     }
 
     .grass {
-      bottom: 50%;
       height: 200px;
       background: #b6f08d; 
       width: 100%;
+      margin-top: auto;
     }
 
     .face {
-      position: absolute;
-      bottom: -100px;
+      position: relative;
       width: 470px;
       height: 400px;
       background: #898a85; 
       border-radius: 50%; 
       overflow: hidden;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+      margin-top: 140px; 
+      left: -100px;
+      z-index: 1;
     }
 
-    .eye {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      background: #ffffff; 
-      border-radius: 50%;
-      border: 2px solid #2b2b2b;
-      z-index: 2; 
-    }
-
-    .pupil {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background: #2b2b2b;
-      border-radius: 50%;
-      top: 70%;
-      transform: translate(-50%, -50%) rotate(0deg);
-      z-index: 3; 
-    }
-
-    .eye.left {
-      left: 55%; 
-      top: 35%;
-    }
-
-    .eye.right {
-      right: 55%; 
-      top: 35%; 
-    }
-
-    .pupil.left {
-      top: 70%; 
-      left: 37%;
-    }
-
-    .pupil.right {
-      top: 70%;  
-      left: 62%;
-    }
-
-    .nose {
-      position: absolute;
-      width: 25px;
-      height: 15px;
-      background: #2b2b2b; 
-      border-radius: 50%;
-      top: 75%; 
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 4; 
-    }
-
-    .face::before {
-      content: "";
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translateX(-50%);
+    .triangle {
       width: 0;
       height: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 400px solid #fafeed;
-      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-      z-index: 1;
+      border-bottom: 270px solid #fafeed;
+      margin-top: 130px; 
+    }
+
+    .eyes {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 2;
+      transform: translateY(calc(-50% - 140px)); 
+      position: relative; 
+    }
+
+    .eye {
+      width: 160px;
+      height: 160px;
+      background: #ffffff; 
+      border-radius: 50%;
+      border: 2px solid #2b2b2b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .pupil {
+      width: 90px;
+      height: 90px;
+      background: #2b2b2b;
+      border-radius: 50%;
+    }
+
+    .eye.left {
+      transform: translateX(35px);
+    }
+
+    .eye.right {
+      transform: translateX(-35px);
+    }
+
+    .pupil.left {
+      margin-top: 30px;
+      margin-left: 70px; 
+    }
+
+    .pupil.right {
+      margin-top: 30px;
+      margin-right: 70px; 
     }
 
     .ear {
-      position: absolute;
-      top: 10%; 
-      width: 250px; 
-      height: 200px; 
-      background: #898a85; 
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border: 20px solid #898a85; 
       z-index: 1;
-      transform-origin: top;
     }
 
     .ear.left {
-      left: 27%; 
-      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
-      transform: rotate(-35deg);
-    }
-
-    .ear.left::before {
-      content: "";
-      position: absolute;
-      top: 10%;
-      left: 10%;
-      width: 75%;
-      height: 80%;
-      background: #fbded4;
-      clip-path: polygon(95% 100%, 50% 0%, 0% 100%);
+      border-width: 0 120px 120px 0; 
+      border-color: transparent #898a85 transparent transparent; 
+      transform: rotate(-70deg);
+      margin-top: -187px;
+      margin-left: -490px;
     }
 
     .ear.right {
-      right: 27%; 
-      clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
-      transform: rotate(33deg);
+      border-width: 0 0 120px 120px; 
+      border-color: transparent transparent transparent #898a85; 
+      transform: rotate(70deg);
+      margin-top: -187px;
+      margin-left: 60px; 
     }
 
-    .ear.right::before {
-      content: "";
-      position: absolute;
-      top: 10%;
-      left: 15%;
-      width: 75%;
-      height: 80%;
-      background: #fbded4;
-      clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+    .ear.left.inner {
+      border-width: 0 100px 100px 0; 
+      border-color: transparent #fedcd0 transparent transparent; 
+      transform: rotate(-70deg);
+      margin-top: -187px;
+      margin-left: -280px; 
     }
-    
+
+    .ear.right.inner {
+      border-width: 0 0 90px 90px; 
+      border-color: transparent transparent transparent #fedcd0; 
+      transform: rotate(70deg);
+      margin-top: -187px;
+      margin-left: 60px;  
+      margin-right: 20px;  
+    }
+
+
+    .nose {
+      width: 15px;
+      height: 10px;
+      background-color: #2b2b2b;
+      border-radius: 50%;
+      position: relative;
+      bottom: -200px;
+      left: -345px;
+      z-index: 1;
+    }
+
   </style>
   <title>Lab4_css</title>
 </head>
 <body>
-    <div class="content">
-      <div class="face">
+  <div class="content">
+    <div class="face">
+      <div class="triangle"></div>
+      <div class="eyes">
         <div class="eye left">
           <div class="pupil left"></div>
         </div>
         <div class="eye right">
           <div class="pupil right"></div>
         </div>
-        <div class="nose"></div>
       </div>
     </div>
+    <div class="nose"></div>
     <div class="ear left"></div>
     <div class="ear right"></div>
-    <div class="grass"></div>
-  </body>
-  </html>
+    <div class="ear left inner"></div> 
+    <div class="ear right inner"></div> 
+  </div>
+  <div class="grass"></div>
+</body>
+</html>
