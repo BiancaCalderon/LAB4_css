@@ -11,6 +11,7 @@
       flex-direction: column;
       min-height: 100vh;
       background: linear-gradient(to bottom, #3bb5f6, #dbedec);
+      position: relative;
     }
 
     .content {
@@ -55,13 +56,14 @@
       margin-top: 130px; 
     }
 
-    .stripes {
-      width: 10px;
-      height: 13px;
-      background-color: #2b2b2b;
+    .spot {
+      width: 100px;
+      height: 68px;
+      background-color: #fafeed;
       border-radius: 50%;
-      top: 5px;
-      left: -10px;
+      position: relative;
+      top: -70px; 
+      z-index: 1; 
     }
 
     .eyes {
@@ -90,6 +92,15 @@
       height: 90px;
       background: #2b2b2b;
       border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .eye.left:hover .pupil {
+      background: purple; 
+    }
+
+    .eye.right:hover .pupil {
+      background: purple; 
     }
 
     .eye.left {
@@ -119,36 +130,36 @@
     }
 
     .ear.left {
-      border-width: 0 120px 120px 0; 
+      border-width: 0 150px 150px 0; 
       border-color: transparent #898a85 transparent transparent; 
       transform: rotate(-70deg);
-      margin-top: -187px;
-      margin-left: -490px;
+      margin-top: -177px;
+      margin-left: -510px;
     }
 
     .ear.right {
-      border-width: 0 0 120px 120px; 
+      border-width: 0 0 150px 150px; 
       border-color: transparent transparent transparent #898a85; 
-      transform: rotate(70deg);
-      margin-top: -187px;
+      transform: rotate(73deg);
+      margin-top: -170px;
       margin-left: 60px; 
     }
 
     .ear.left.inner {
-      border-width: 0 100px 100px 0; 
+      border-width: 0 110px 110px 0; 
       border-color: transparent #fedcd0 transparent transparent; 
-      transform: rotate(-70deg);
-      margin-top: -190px;
-      margin-left: -280px; 
+      transform: rotate(-75deg);
+      margin-top: -177px;
+      margin-left: -320px; 
     }
 
     .ear.right.inner {
-      border-width: 0 0 90px 90px; 
+      border-width: 0 0 110px 110px; 
       border-color: transparent transparent transparent #fedcd0; 
-      transform: rotate(70deg);
-      margin-top: -190px;
+      transform: rotate(75deg);
+      margin-top: -177px;
       margin-left: 80px;  
-      margin-right: 20px;  
+      margin-right: 30px;  
     }
 
     .nose {
@@ -230,7 +241,7 @@
       margin-top: -130px;
       margin-left: 450px;
       position: relative;
-      animation: tailAnimation 3s infinite alternate; /* Animación añadida */
+      animation: tailAnimation 3s infinite alternate; 
     }
 
     .stripe {
@@ -251,6 +262,31 @@
     .stripe:nth-child(3) {
       top: 25px;
       left: 30px;
+    }
+
+    .cloud {
+      width: 120px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.5s ease; 
+      margin-top: -300px;
+      margin-left: 5px;
+      flex-shrink: 0; 
+      display: inline-block; 
+    }
+
+    .cloud-part {
+      width: 40px;
+      height: 65px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      margin: -3px;
+    }
+
+    .content:hover .cloud {
+      transform: translateX(20px) translateY(-20px); 
     }
 
     @keyframes tailAnimation {
@@ -282,6 +318,11 @@
 </head>
 <body>
   <div class="content">
+    <div class="cloud"> 
+      <div class="cloud-part"></div>
+      <div class="cloud-part"></div>
+      <div class="cloud-part"></div>
+    </div>
     <div class="paw">
       <div class="oval"></div>
     </div> 
@@ -295,6 +336,7 @@
           <div class="pupil right"></div>
         </div>
       </div>
+      <div class="spot"></div> 
     </div>
     <div class="paw right">
       <div class="oval right"></div>
