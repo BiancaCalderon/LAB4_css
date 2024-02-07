@@ -230,6 +230,7 @@
       margin-top: -130px;
       margin-left: 450px;
       position: relative;
+      animation: tailAnimation 3s infinite alternate; /* Animación añadida */
     }
 
     .stripe {
@@ -252,6 +253,17 @@
       left: 30px;
     }
 
+    @keyframes tailAnimation {
+      0% {
+        transform: rotate(45deg);
+      }
+      50% {
+        transform: rotate(50deg);
+      }
+      100% {
+        transform: rotate(45deg);
+      }
+    }
 
     .butt {
       width: 500px;
