@@ -123,13 +123,43 @@
       z-index: 1;
     }
 
+    .stripe-face {
+      width: 15px;
+      height: 90px;
+      background-color: #2b2b2b;
+      position: relative;
+      top: -85px; 
+      left: 158px; 
+      transform: rotate(0deg);
+      z-index: 2; 
+    }
+
+    .stripe-face:nth-child(2) {
+      top: -50px; 
+      left: 180px; 
+      height: 100px;
+      z-index: 2; 
+    }
+
+    .stripe-face:nth-child(3) {
+      top: -58px; /* Primero */
+      left: 145px; 
+      z-index: 2; 
+    }
+
+    .stripe-face:nth-child(4) {
+      top: -68px; /* Último */
+      left: 220px; 
+      z-index: 2; 
+    }
+
     .triangle {
       width: 0;
       height: 0;
-      border-left: 200px solid transparent;
-      border-right: 200px solid transparent;
-      border-bottom: 270px solid #fafeed;
-      margin-top: 130px; 
+      border-left: 210px solid transparent;
+      border-right: 210px solid transparent;
+      border-bottom: 250px solid #fafeed;
+      margin-top: 150px; 
       position: relative;
       z-index: 2; 
     }
@@ -138,7 +168,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      z-index: 2;
+      z-index: 3; 
       transform: translateY(calc(-50% - 140px)); 
       position: relative; 
     }
@@ -196,7 +226,7 @@
     .ear.left {
       border-width: 0 150px 150px 0; 
       border-color: transparent #898a85 transparent transparent; 
-      transform: rotate(-70deg);
+      transform: rotate(-71deg);
       margin-top: -177px;
       margin-left: -475px;
     }
@@ -338,7 +368,7 @@
 
     .stripe:nth-child(3) {
       top: 25px;
-      left: 30px;
+      left: 18px;
     }
 
     .cloud {
@@ -395,26 +425,6 @@
       transition: background-color 0.25s ease;
     }
 
-    
-    .stripe {
-      width: 30px;
-      height: 50px;
-      background-color: #2b2b2b;
-      position: relative;
-      top: 18px;
-      left: 20px;
-      transform: rotate(-82deg);
-    }
-
-    .stripe:nth-child(2) {
-      top: 20px;
-      left: 15px;
-    }
-
-    .stripe:nth-child(3) {
-      top: 25px;
-      left: 20px;
-    }
   </style>
   <title>Lab4_css</title>
 </head>
@@ -428,6 +438,9 @@
     <div class="paw">
       <div class="leg right"></div>
     </div> 
+    <div class="stripe-face"></div>
+    <div class="stripe-face"></div>
+    <div class="stripe-face"></div>
     <div class="face">
       <div class="triangle"></div>
       <div class="yarn"></div>
